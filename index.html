@@ -14,24 +14,25 @@
     <span>
         <img src="images/azir.jpeg" alt="azirbird" class="azir" width="100%" style="border-radius: 50%;">
     </span>
-    <p class="intro"> Hi, I am Irfan and welcome to my website which I use as a portfolio to show my projects.</p>
-    <p class="intro">I am an electrical electronics engineering student in Marmara University, Turkey. I am interested in embedded programming and here are some of my projects. I am currently studying at Poznan University of Technology, Poland through Erasmus.</p>
+    <p class="intro"> &emsp;Hi, I am Irfan and welcome to my website which I use as a portfolio to show my projects.</p>
+    <p class="intro">&emsp;I am an electrical electronics engineering student in Marmara University, Turkey. I am interested in embedded programming and here are some of my projects. I am currently studying at Poznan University of Technology, Poland through Erasmus.</p>
     <p class="intro"></p>
     <a href="Irfan_Yucesan_Resume.pdf" download> <button>Download My Resume</button></a>
-    <p class="about" style="color:#e8e8e8; font-size: 1em;">Contact: <a href="mailto: irfanyucesann@gmail.com" class="mail"> irfanyucesann@gmail.com </a></p>
+    <p class="about" style="color:#1c1b22; font-size: 1em;">Contact: <a href="mailto: irfanyucesann@gmail.com" class="mail"> irfanyucesann@gmail.com </a></p>
     <div class="project">
     <h1 class="about">Pong Game in Verilog on VGA display / FPGA </h1>
     <p class="about">the source code: <a href="https://github.com/irfany1/VGA-pong-game-in-verilog" class="srclink"> here </a></p>
-    <img src="images/connections.png" alt="connect" width="100%" class="photos">
-    <h3>About</h3>
-    <p>This was my final project for my Digital Design course.</p>
-    <p>The game is a simple Pong game where the user can move the paddle through the buttons on the FPGA board.</p>
-    <img src="images/ponggame.gif" alt="pong_game" width="100%" class="photos">
-    <p>There is a VGA Pmod to make life easier but I did not want to pay the extra bucks so instead I just made the VGA connections myself according to the schematic below</p>
+    <h3 class="about">About</h3>
+
+    <img src="images/connections.png" alt="connect" width="70%" class="photos">
+    <p>&emsp;This was my final project for my Digital Design course.</p>
+    <p>&emsp;The game is a simple Pong game where the user can move the paddle through the buttons on the FPGA board.</p>
+    <img src="images/ponggame.gif" alt="pong_game" width="70%" class="photos">
+    <p>&emsp;There is a VGA Pmod to make life easier but I did not want to pay the extra bucks so instead I just made the VGA connections myself according to the schematic below</p>
     <img src="images/vgaschematic.jpg" alt="vga_schematic" width="60%" class="photos">
-    <p>So we have 3 color signals, 1 horizontal sync signal, 1 vertical sync signal and the rest are either not connected or just connected to ground voltage.</p>
-    <p>Now for the detailed explanation on how the code works</p>
-    <p>To drive a display on the monitor there are 2 signals. VSync (vertical sync) and the Hsync (horizontal sync). My monitor works on 60Hz Vsync so we need to make the clock calculations according to that. To drive a VGA Signal 640 x 480 @ 60 Hz we need to have a 25MHz pixel frequency. And since my FPGA board (CMOD A7-35T) has a 12MHz input clock, I had to use Vivado's Clocking Wizard IP. Here is the code for the VSync and HSync:</p>
+    <p>&emsp;So we have 3 color signals, 1 horizontal sync signal, 1 vertical sync signal and the rest are either not connected or just connected to ground voltage.</p>
+    <p>&emsp;Now for the detailed explanation on how the code works</p>
+    <p>&emsp;To drive a display on the monitor there are 2 signals. VSync (vertical sync) and the Hsync (horizontal sync). My monitor works on 60Hz Vsync so we need to make the clock calculations according to that. To drive a VGA Signal 640 x 480 @ 60 Hz we need to have a 25MHz pixel frequency. And since my FPGA board (CMOD A7-35T) has a 12MHz input clock, I had to use Vivado's Clocking Wizard IP and since I am using a 640x480 resolution I made the active area between those pixels. Here is the code for the VSync and HSync:</p>
     <div class="box">
         <pre>
 module vhsync(
@@ -81,12 +82,11 @@ assign vsync = ~vga_VS;
 endmodule
         </pre>
     </div>
-    <p>and since I am using a 640x480 resolution I made the active area between those pixels.</p>
-    <p>After managing to drive the display successfully, I needed to create the game (wow). </p>
-    <p>First I decided to use only 3 color bits -one for red, one for green and one for blue - since I do not have the PMod I needed to connect them so I didnt bother - but you can also use more by changing the number of color bits.</p>
-    <p>There are 3 parts on this game - the ball, the paddle and the walls. We can create the wall easily - I made it 25px thick but you can also change it in the code - by setting it up in the counters for X and Y.</p>
-    <p>The next part is the ball. The ball will start at the top left corner and move towards bottom right. We can set the size,the speed, the color and the shape -you need to use ROM- of the ball. But first we need to change its speed in the opposite direction whenever it hits the wall or the paddle. For this part we need to say that if the right side of the square ball hits the wall, then we should change the speed. I did that part one by one for all the scenarios and it turned out fine.</p>
-    <p>The paddle part is much easier, we create it on the left side on the screen and give it a height from the ground and a thickness and length so it can be used as different difficulty settings if made further improvements. Also we can change the speed of the paddle by changing the parameter in the code. Here is the code:</p>
+    <p>&emsp;After managing to drive the display successfully, I needed to create the game (wow). </p>
+    <p>&emsp;First I decided to use only 3 color bits -one for red, one for green and one for blue - since I do not have the PMod I needed to connect them so I didnt bother - but you can also use more by changing the number of color bits.</p>
+    <p>&emsp;There are 3 parts on this game - the ball, the paddle and the walls. We can create the wall easily - I made it 25px thick but you can also change it in the code - by setting it up in the counters for X and Y.</p>
+    <p>&emsp;The next part is the ball. The ball will start at the top left corner and move towards bottom right. We can set the size,the speed, the color and the shape -you need to use ROM- of the ball. But first we need to change its speed in the opposite direction whenever it hits the wall or the paddle. For this part we need to say that if the right side of the square ball hits the wall, then we should change the speed. I did that part one by one for all the scenarios and it turned out fine.</p>
+    <p>&emsp;The paddle part is much easier, we create it on the left side on the screen and give it a height from the ground and a thickness and length so it can be used as different difficulty settings if made further improvements. Also we can change the speed of the paddle by changing the parameter in the code. Here is the code:</p>
     <div class="box">
         <pre>
 `timescale 1ns / 1ps
@@ -248,15 +248,15 @@ end
 endmodule
         </pre>
     </div>
-    <p>I think this was a rather poor explanation but at least you know what can be done to improve or change the game. Thanks for reading </p>
+    <p>&emsp;I think this was a rather poor explanation but at least you know what can be done to improve or change the game. Thanks for reading </p>
     </div>
     <div class="project">
     <h1 class="about">Microblaze on FPGA</h1>
     <p>the source code: <a href="https://github.com/irfany1/microblaze-cmoda7" class="srclink"> here </a></p>
     <img src="images/mblaze.gif" alt="mblaze" width="40%" class="photos">
-    <h3>About</h3>
-    <p>Microblaze allows you to turn your FPGA into a microcontroller. You can choose which parts of the FPGA you would like to put into the microcontroller, the LEDs, the buttons, the switches etc..You can choose which parts you would like to use on Vivado. I first created a block design and added 2 buttons, 2 LEDs, an external clock and the UART peripheral. After connecting the peripherals we choose from the file menu [Export Hardware] - which creates an XSA file for us to use on Vitis (to code our microcontroller).</p>
-    <p>After opening Vitis with the XSA file, there are ready layouts for us to use (Hello World). I put a simple program in which when I press one of the two buttons it says which one of the buttons is pressed. </p>
+    <h3 class="about">About</h3>
+    <p>&emsp;Microblaze allows you to turn your FPGA into a microcontroller. You can choose which parts of the FPGA you would like to put into the microcontroller, the LEDs, the buttons, the switches etc..You can choose which parts you would like to use on Vivado. I first created a block design and added 2 buttons, 2 LEDs, an external clock and the UART peripheral. After connecting the peripherals we choose from the file menu [Export Hardware] - which creates an XSA file for us to use on Vitis (to code our microcontroller).</p>
+    <p>&emsp;After opening Vitis with the XSA file, there are ready layouts for us to use (Hello World). I put a simple program in which when I press one of the two buttons it says which one of the buttons is pressed. </p>
     <div class="box">
         <pre>
 #include "xparameters.h"
@@ -313,9 +313,9 @@ int main() {
     <div class="project">
     <h1 class="about">VGA Image Testing in Verilog / FPGA </h1>
     <p>the source code: <a href="https://github.com/irfany1/vga_testing" class="srclink"> here </a></p>
-    <img src="images/vgatesting.png" alt="vga_test" width="100%" class="photos">
-    <h3>About</h3>
-    <p>This is an easier version of the pong game since nothing is moving on the screen. Since I was using 3 bits for the colors I showed all 8 colors I could use on the screen. The VSync and HSync is the same as the Pong project but the image code is rather simple so I will put it down: </p>
+    <img src="images/vgatesting.png" alt="vga_test" width="70%" class="photos">
+    <h3 class="about">About</h3>
+    <p>&emsp;This is an easier version of the pong game since nothing is moving on the screen. Since I was using 3 bits for the colors I showed all 8 colors I could use on the screen. The VSync and HSync is the same as the Pong project but the image code is rather simple so I will put it down: </p>
     <div class="box">
         <pre>
 timescale 1ns / 1ps
@@ -381,9 +381,10 @@ end
 endmodule
         </pre>
     </div>
-    So as you can see I since the length of the screen is 640 pixels and in total I have 8 different colors due to 3 bits of color - 2^3=8 - I gave every color 80 pixels to make them even and thats about it. I also made the top of the screen white and the bottom of it just to show that we can also change the colors horizontally.
+    &emsp;So as you can see I since the length of the screen is 640 pixels and in total I have 8 different colors due to 3 bits of color - 2^3=8 - I gave every color 80 pixels to make them even and thats about it. I also made the top of the screen white and the bottom of it just to show that we can also change the colors horizontally.
     </div>
 </div>
+
 <div class="footer"> LinkedIn : <a href="https://www.linkedin.com/in/irfan-yucesan/">here</a></div>
 <script src="script.js"></script>
 </body>
