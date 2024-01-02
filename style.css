@@ -12,7 +12,7 @@ body {
     font-family: 'Big Shoulders Inline Text', sans-serif;
     font-family: 'Nunito Sans', sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background-color: #f7f1ee;
+    background-color: #fff;
 }
 
 .intro{
@@ -53,17 +53,16 @@ button {
 }
 
 button:hover {
-    background-color: #f7f1ee; 
+    background-color: whitesmoke; 
     color: #2b2a33;
     border: #2b2a33  solid 2px;
     cursor: pointer;
 }
 
 .project{
-    background-color: #fdfcfb  ;
+    background-color: #fff  ;
     padding: 5%;
-    margin-top: 2%;;
-    box-shadow:  0 1px 10px 0 #050506 ;
+    margin-top: 2%;
 }
 
 .footer{
@@ -75,8 +74,8 @@ button:hover {
 }
 
 .box{
-    background-color: #1c1b22;
-    color: #e8e8e8;
+    background-color: whitesmoke;
+    color: black;
     border: none;
     height: 400px;
     padding: 1%;
