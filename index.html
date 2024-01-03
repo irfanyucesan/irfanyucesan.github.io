@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Irfan Yucesan</title>
+    <title>Irfan Yucesan Portfolio</title>
 </head>
 <body>
     <div class="header_class" id="header_id">
             <h1> Irfan Yucesan Portfolio </h1>
     </div>
-<div class="content">
-    <span>
+        <span>
         <img src="images/azir.jpeg" alt="azirbird" class="azir">
     </span>
+<div class="content">
     <p class="intro"> &emsp;Hi! I am Irfan, an electrical-electronics engineering student studying at Marmara University, Istanbul. Currently I am in Poland, studying at Poznan University of Technology through Erasmus programme.</p>
-    <br>
     <p class="intro">&emsp;This is my portfolio website to show my projects.</p>
     <p class="intro"></p>
     <a href="Irfan_Yucesan_Resume.pdf" download> <button>Download My Resume</button></a>
     <p class="about" style="color:#1c1b22; font-size: 1em;">Contact: <a href="mailto: irfanyucesann@gmail.com" class="mail"> irfanyucesann@gmail.com </a></p>
     <div> <a href="https://www.linkedin.com/in/irfan-yucesan/" class="mail">LinkedIn</a></div>
-    <div style="font-size: 3.5em; text-align: center;">Projects</div>
+    <br>
     <div class="project">
     <h1 class="title">Pong Game in Verilog on VGA display on FPGA </h1>
-    <p class="about"> <a href="https://github.com/irfany1/VGA-pong-game-in-verilog" class="srclink"> the source code </a></p>
+    <p class="about"> <a href="https://github.com/irfany1/VGA-pong-game-in-verilog" class="srclink">source code </a></p>
     <img src="images/connections.png" alt="connect" class="photos">
     <p>&emsp;This was my final project for my Digital Design course.</p>
     <p>&emsp;The game is a simple Pong game where the user can move the paddle through the buttons on the FPGA board.</p>
@@ -252,9 +251,8 @@ endmodule
     <p>&emsp;I think this was a rather poor explanation but at least you know what can be done to improve or change the game. Thanks for reading </p>
     </div>
     <div class="project">
-    <h1 class="about">Microblaze on FPGA</h1>
-    <p>the source code: <a href="https://github.com/irfany1/microblaze-cmoda7" class="srclink"> here </a></p>
-    <img src="images/mblaze.gif" alt="mblaze" class="photos">
+    <h1 class="title">Microblaze on FPGA</h1>
+    <p><a href="https://github.com/irfany1/microblaze-cmoda7" class="srclink">source code</a></p>
     <p>&emsp;Microblaze allows you to turn your FPGA into a microcontroller. You can choose which parts of the FPGA you would like to put into the microcontroller, the LEDs, the buttons, the switches etc..You can choose which parts you would like to use on Vivado. I first created a block design and added 2 buttons, 2 LEDs, an external clock and the UART peripheral. After connecting the peripherals we choose from the file menu [Export Hardware] - which creates an XSA file for us to use on Vitis (to code our microcontroller).</p>
     <p>&emsp;After opening Vitis with the XSA file, there are ready layouts for us to use (Hello World). I put a simple program in which when I press one of the two buttons it says which one of the buttons is pressed. </p>
     <div class="box">
@@ -311,8 +309,8 @@ int main() {
     </div>
     </div>
     <div class="project">
-    <h1 class="about">VGA Image Testing in Verilog / FPGA </h1>
-    <p>the source code: <a href="https://github.com/irfany1/vga_testing" class="srclink"> here </a></p>
+    <h1 class="title">VGA Image Testing in Verilog / FPGA </h1>
+    <p><a href="https://github.com/irfany1/vga_testing" class="srclink">source code</a></p>
     <img src="images/vgatesting.png" alt="vga_test" class="photos">
     <p>&emsp;This is an easier version of the pong game since nothing is moving on the screen. Since I was using 3 bits for the colors I showed all 8 colors I could use on the screen. The VSync and HSync is the same as the Pong project but the image code is rather simple so I will put it down: </p>
     <div class="box">
