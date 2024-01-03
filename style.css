@@ -60,12 +60,12 @@ button {
 button:hover {
     background-color: #fff; 
     color: #2b2a33;
-    border: #2b2a33  solid 2px;
+    border: #fff  solid 2px;
     cursor: pointer;
 }
 
 .project{
-    background-color: #fff  ;
+    background-color: #e8e8e8  ;
     padding: 5%;
     margin-top: 2%;
 }
@@ -79,8 +79,8 @@ button:hover {
 }
 
 .box{
-    background-color: #e8e8e8;
-    color: black;
+    background-color: #2b2a33;
+    color: #e8e8e8;
     border: none;
     height: 400px;
     width: 60%;
