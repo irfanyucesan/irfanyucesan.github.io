@@ -35,10 +35,14 @@ body {
 }
 
 .title{
-    font-size: 2.2em;
+    font-size: 1.8em;
     color: #2b2a33;
 }
 
+.title1{
+    font-size: 2.2em;
+    color: #2b2a33;
+}
 .content {
     padding-left: 10%;
     padding-right: 15%;
