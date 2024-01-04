@@ -9,7 +9,7 @@ body {
     height: 100%;
     background-position: center;
     background-size: cover;
-    background-color: #e8e8e8;
+    background-color: #d2d0db;
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
 }
@@ -23,7 +23,7 @@ body {
 .header_class {
     background-color: #2b2a33;
     color: #e8e8e8;
-    padding-left: 7%;
+    padding-left: 9%;
     padding-top: 2%;
     padding-bottom: 2%;
     top: 0%;
@@ -36,12 +36,12 @@ body {
 
 .title{
     font-size: 1.8em;
-    color: #2b2a33;
+    color: #e8e8e8;
 }
 
 .title1{
     font-size: 2.2em;
-    color: #2b2a33;
+    color: #e8e8e8;
 }
 .content {
     padding-left: 10%;
@@ -51,7 +51,7 @@ body {
 button {
     background-color: #2b2a33;
     border: #2b2a33 solid 2px;
-    color: #e8e8e8 ;
+    color: #e8e8e8;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -59,33 +59,26 @@ button {
     font-size: 16px;
     transition: 0.3s;
     margin-bottom: 2%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:hover {
-    background-color: #fff; 
-    color: #2b2a33;
-    border: #fff  solid 2px;
+    background-color: #1f1f25; 
+    border: #2b2a33  solid 2px;
     cursor: pointer;
 }
 
 .project{
-    background-color: #e8e8e8  ;
-    padding-top: 2%;
-    padding-left: 2%;
-    padding-right: 2%;
-    margin-top: 2%;
-}
-
-.footer{
-    background-color: #2b2a33;
-    text-align: center;
-    color: #e8e8e8 ;
+    color: #e8e8e8;
     padding: 2%;
-    margin-top: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #2b2a33;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .box{
-    background-color: #2b2a33;
+    background-color: #1f1f25;
     color: #e8e8e8;
     border: none;
     height: 400px;
@@ -120,7 +113,7 @@ color: #1c1b22;
 
 .azir{
     margin-left: 13%;
-    margin-top: 3%;
+    margin-top: 4%;
     margin-right: 5%;
     float: left;
     border-radius: 50%;
