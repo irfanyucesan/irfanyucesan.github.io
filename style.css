@@ -67,7 +67,6 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    transition: 0.3s;
     margin-bottom: 2%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -76,6 +75,7 @@ button:hover {
     background-color: #1f1f25; 
     border: #2b2a33  solid 2px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 .project{
@@ -85,6 +85,11 @@ button:hover {
     margin-bottom: 2%;
     background-color: #2b2a33;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.project:hover{
+    background-color: #1f1f25;
+    transition: 0.3s;
 }
 
 .box{
