@@ -177,3 +177,7 @@ p{
     transform: scaleX(1);
     transform-origin: center;
 }
+
+html {
+    scroll-behavior: smooth;
+}
