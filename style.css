@@ -72,8 +72,8 @@ button {
 }
 
 button:hover {
-    background-color: #1f1f25; 
-    border: #2b2a33  solid 2px;
+    background-color: #222128; 
+    border: #222128  solid 2px;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -88,7 +88,7 @@ button:hover {
 }
 
 .project:hover{
-    background-color: #1f1f25;
+    background-color: #222128 ;
     transition: 0.3s;
 }
 
