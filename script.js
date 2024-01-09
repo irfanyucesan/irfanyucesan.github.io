@@ -8,7 +8,7 @@ canvas.height = window.innerHeight;
 let c = canvas.getContext("2d");
 
 let bubleCord = [];
-let balls = 10;
+let balls = 15;
 
 for(let i=0; i<balls;i++){
     bubleCord.push({
