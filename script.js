@@ -7,6 +7,15 @@ canvas.height = window.innerHeight;
 
 let c = canvas.getContext("2d");
 
+let mouse = {
+    x:0,
+    y:0
+}
+window.addEventListener("mousemove", function(e){
+    mouse.x=e.x;
+    mouse.y=e.y;
+})
+
 let bubleCord = [];
 let balls = 15;
 
@@ -33,9 +42,12 @@ function draw(){
     for(let i=0; i<bubleCord.length;i++){
         let l1 = bubleCord[i];
         c.moveTo(l1.x,l1.y);
+        if(distance(mouse,l1) <70){
+            c.lineTo(mouse.x,mouse.y);
+        }
         for(let j=0;j<bubleCord.length;j++){
             let l2 = bubleCord[j];
-            if(distance(l1,l2) < 300){
+            if(distance(l1,l2) < 350){
                 c.lineTo(l2.x,l2.y);
             }
         }
