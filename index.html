@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Irfan Yucesan Portfolio</title>
+    <title>Irfan Yucesan</title>
 </head>
 <body>
     <div class="header_class" id="header_id">
-            <h1> Irfan Yucesan Portfolio </h1>
+            <h1> Irfan Yucesan Portfolio</h1>
+            <h1> (and some notes & experiments)</h1>
             <nav>
                 <ul>
                     <li><a href="#education" class="hover-underline-animation">Education</a></li>
@@ -36,11 +37,11 @@
 <canvas>
 </canvas>
 <div class="content">
-    <p class="intro"> &emsp;Hi, I am İrfan.
-        Welcome to my portfolio!
-        I am in my senior year at Marmara University studying Electrical-Electronics Engineering. I am interested in hardware design and embedded systems. My goal is to work as a Hardware Engineer in the future.
-        </p>
-    <p class="intro"></p>
+    <p class="intro"> &emsp;Hi, I am İrfan and welcome to my page!
+        I am in my senior year at Marmara University studying Electrical-Electronics Engineering. I am interested in hardware design and embedded systems.
+    </p>
+    <p class="intro">&emsp; Dont expect anything much :P</p>
+    <br>
     <a href="Irfan_Yucesan_Resume.pdf" download> <button>Download My Resume</button></a>
     <br>
     <div class="project" id="education">
@@ -138,8 +139,15 @@
     <p>&emsp;The rest of the process is almost the same as the PMSM project. Again I used gain, sum, integrator and scope blocks for the model on SIMULINK. </p>
     <img src="images/mgsm.png" alt="mgsm" class="photos">
     <p>&emsp; Finally, I wrote the needed values and the code to see the measurement results from the scope. To see the script you can visit my GitHub account.</p>
-    <br>
-    <p>&emsp;Thanks for reading. </p>
+</div>
+<div class="project">
+    <h1 class="title">Sine Wave Generator</h1>
+    <p>&emsp;I've been researching various types of oscillators for a while, such as triangular, sawtooth, square wave, etc. during my internship.</p>
+    <p>&emsp; I came across this "superior" sine wave oscillator in the Handbook of Operational Amplifier Circuit Design by David F. Stout. In this oscillator, we can change the frequency and amplitude of the sine wave by adjusting resistors R1 and R4, respectively. The values of the capacitors and other resistors in this circuit depend on the input bias current, output offset, and unity gain crossover frequency of the operational amplifier we choose—all of which can be found in the datasheet of the op-amp. These values also vary depending on the desired main frequency of the oscillator. The book I mentioned clearly explains all the formulas for these calculations. </p>
+    <img src="images/sinewave_ltspice.png" alt="sinewave_spice" class="photos">
+    <p>&emsp; So after the calculations I could get a frequency between 15Hz to 20kHz with a maximum amplitude of +15V - since the supply voltages of the op-amps are +15V and -15V.</p>
+    <img src="images/sinewave_res.png" alt="res" class="photos">
+    <p>&emsp; The result is a nice clean sine wave.</p>
 </div>
 <div class="footer">
     <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
